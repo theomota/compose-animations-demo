@@ -1,15 +1,23 @@
 package com.care.animationdemo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.care.animationdemo.ui.theme.AnimationDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,26 +26,28 @@ class MainActivity : ComponentActivity() {
         setContent {
             AnimationDemoTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
+                Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                    topBar = {
+                        TopAppBar(modifier = Modifier.fillMaxWidth()) {}
+                    }
                 ) {
-                    Greeting("Android")
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(16.dp)
+                    ) {
+                        item {
+                            Button(onClick = {
+                                val i =
+                                    Intent(this@MainActivity, AnimateAsStateActivity::class.java)
+                                startActivity(i)
+                            }) {
+                                Text(text = "Animate*AsState")
+                            }
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    AnimationDemoTheme {
-        Greeting("Android")
     }
 }
