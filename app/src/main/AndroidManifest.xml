@@ -23,6 +23,8 @@
 
         <activity android:name=".AnimateAsStateActivity" />
         <activity android:name=".InfiniteTransitionsActivity" />
+        <activity android:name=".AnimateContentSizeActivity" />
+        <activity android:name=".AnimateVisibilityActivity" />
     </application>
 
 </manifest>

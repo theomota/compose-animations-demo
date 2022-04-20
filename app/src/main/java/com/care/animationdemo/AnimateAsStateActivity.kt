@@ -82,6 +82,18 @@ class AnimateAsStateActivity : ComponentActivity() {
         }
     }
 
+
+    /**
+     * Following functions are available to customize your animations:
+     *
+     * tween
+     * keyframes
+     * spring
+     * repeatable
+     * infiniteRepeatable
+     * snap
+     *
+     */
     @Preview
     @Composable
     fun DemoColor() {

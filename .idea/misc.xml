@@ -5,8 +5,17 @@
       <map>
         <entry key="../../../../layout/compose-model-1650481391639.xml" value="0.5" />
         <entry key="../../../../layout/compose-model-1650484349678.xml" value="0.30658783783783783" />
+        <entry key="../../../../layout/compose-model-1650485391009.xml" value="0.2951954397394137" />
+        <entry key="../../../../layout/compose-model-1650485401724.xml" value="1.0" />
+        <entry key="../../../../layout/compose-model-1650485909395.xml" value="0.30743243243243246" />
+        <entry key="../../../../layout/compose-model-1650487987545.xml" value="0.23333333333333334" />
+        <entry key="../../../../layout/compose-model-1650488086022.xml" value="1.0" />
+        <entry key="../../../../layout/compose-model-1650488442440.xml" value="0.9163636363636364" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.158" />
+        <entry key="app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1885" />
         <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1885" />
+        <entry key="app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.126" />
+        <entry key="app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.126" />
       </map>
     </option>
   </component>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.care.animationdemo.ui.theme.AnimationDemoTheme
 
+@ExperimentalAnimationApi
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +61,30 @@ class MainActivity : ComponentActivity() {
                                 startActivity(i)
                             }) {
                                 Text(text = "Infinite Transitions")
+                            }
+
+                            Spacer(modifier = Modifier.height(16.dp))
+                        }
+
+                        item {
+                            Button(onClick = {
+                                val i =
+                                    Intent(this@MainActivity, AnimateContentSizeActivity::class.java)
+                                startActivity(i)
+                            }) {
+                                Text(text = "Animate Content Size")
+                            }
+
+                            Spacer(modifier = Modifier.height(16.dp))
+                        }
+
+                        item {
+                            Button(onClick = {
+                                val i =
+                                    Intent(this@MainActivity, AnimateVisibilityActivity::class.java)
+                                startActivity(i)
+                            }) {
+                                Text(text = "Animate Visibility")
                             }
 
                             Spacer(modifier = Modifier.height(16.dp))
