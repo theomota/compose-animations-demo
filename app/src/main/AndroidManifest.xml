@@ -22,6 +22,7 @@
         </activity>
 
         <activity android:name=".AnimateAsStateActivity" />
+        <activity android:name=".InfiniteTransitionsActivity" />
     </application>
 
 </manifest>
